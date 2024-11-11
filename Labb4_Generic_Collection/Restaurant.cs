@@ -30,7 +30,10 @@
         }
         public void ShowOrders()
         {
-
+            foreach (var order in _order)
+            {
+                Console.WriteLine(order);
+            }
         }
         public void ShowNextOrder()
         {

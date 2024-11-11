@@ -14,5 +14,9 @@
             _orderItems = orderItems;
             _tableNumber = tableNumber;
         }
+        public void AddMenuItem(MenuItem menuItem)
+        {
+            _orderItems.Add(menuItem);
+        }
     }
 }
