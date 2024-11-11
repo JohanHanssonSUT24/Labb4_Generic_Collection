@@ -6,32 +6,33 @@
         {
             Restaurant Menu = new Restaurant();
 
-            MenuItem Pizza = new MenuItem(1, "Pizza", 150M);
-            MenuItem Hamburger = new MenuItem(2, "Hamburger", 180M);
-            MenuItem Kebab = new MenuItem(3, "Kebab", 199M);
-            MenuItem Falafel = new MenuItem(4, "Falafel", 200M);
+            MenuItem Pizza = new MenuItem(1, "Pizza", 150.55M);
+            MenuItem Hamburger = new MenuItem(2, "Hamburger", 180.01M);
+            MenuItem Kebab = new MenuItem(3, "Kebab", 199.99M);
+            MenuItem Falafel = new MenuItem(4, "Falafel", 200.50M);
+            MenuItem Hotdog = new MenuItem(5, "Hotdog", 99.99M);
 
-            Menu.AddtoMenu(Pizza);
-            Menu.AddtoMenu(Hamburger);
-            Menu.AddtoMenu(Kebab);
-            Menu.AddtoMenu(Falafel);
+            //Menu.AddtoMenu(Pizza);
+            //Menu.AddtoMenu(Hamburger);
+            //Menu.AddtoMenu(Kebab);
+            //Menu.AddtoMenu(Falafel);
+            //Menu.AddtoMenu(Hotdog);
 
-            Menu.ShowMenu();
+            //Menu.ShowMenu();
 
-            Order order = new Order(new List<MenuItem>(), 1);
-            order.AddMenuItem(Pizza);
-            order.AddMenuItem(Falafel);
-            Order order2 = new Order(new List<MenuItem>(), 2);
-            order2.AddMenuItem(Kebab);
-            order2.AddMenuItem(Hamburger);
-            Order order3 = new Order(new List<MenuItem>(), 3);
-            order3.AddMenuItem(Hotdog);
-            order3.AddMenuItem(Hamburger);
-
-            Menu.CreateOrder(order);
+            Order order1 = new Order(new List<MenuItem>() { Pizza, Falafel }, 7);
+            Menu.CreateOrder(order1);
+            Order order2 = new Order(new List<MenuItem>() { Hotdog, Kebab }, 3);
             Menu.CreateOrder(order2);
+            Order order3 = new Order(new List<MenuItem>() { Hamburger, Pizza }, 1);
             Menu.CreateOrder(order3);
+
             Menu.ShowOrders();
+            Console.WriteLine("---------");
+            
+            
+            
+            
         }
     }
 }

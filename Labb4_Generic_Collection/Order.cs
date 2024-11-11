@@ -7,6 +7,7 @@
         private List<MenuItem> _orderItems;
         private int _tableNumber;
 
+
         public Order(List<MenuItem> orderItems, int tableNumber)
         {
             _orderId = orderIdCounter;
@@ -14,9 +15,18 @@
             _orderItems = orderItems;
             _tableNumber = tableNumber;
         }
-        public void AddMenuItem(MenuItem menuItem)
+        public override string ToString()
         {
-            _orderItems.Add(menuItem);
+            decimal cost = 0;
+            foreach (var costs in _orderItems)
+            {
+                cost += costs.Price;
+            }
+            var items = string.Join(", ", _orderItems);
+            return $"OrderId: {_orderId}\nTablenumber: {_tableNumber}\nOrder: {items}\nTotal bill: {cost}\n";
         }
+
     }
-}
+
+}   
+
