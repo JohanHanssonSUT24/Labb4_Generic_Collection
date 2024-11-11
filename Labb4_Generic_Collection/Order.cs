@@ -22,8 +22,8 @@
             {
                 cost += costs.Price;
             }
-            var items = string.Join(", ", _orderItems);
-            return $"OrderId: {_orderId}\nTablenumber: {_tableNumber}\nOrder: {items}\nTotal bill: {cost}\n";
+            var totalItems = string.Join(", ", _orderItems);
+            return $"OrderId: {_orderId}\nTablenumber: {_tableNumber}\nOrder: {totalItems}\nTotal bill: {cost.ToString("C")}\n";
         }
 
     }
