@@ -9,6 +9,7 @@
         public void AddtoMenu(MenuItem menuItem)
         {
             _menu.Add(menuItem);
+            Console.WriteLine($"New menu-item: {menuItem}");
         }
         public void ShowMenu()
         {
@@ -22,7 +23,6 @@
         public void CreateOrder(Order order)
         {
             _order.Enqueue(order);
-            Console.WriteLine($"Order: {_order}");
         }
         public void HandleOrder()
         {
@@ -30,7 +30,10 @@
         }
         public void ShowOrders()
         {
-
+            foreach (var showOrder in _order)
+            {
+                Console.WriteLine(showOrder);
+            }
         }
         public void ShowNextOrder()
         {
