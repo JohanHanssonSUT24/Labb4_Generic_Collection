@@ -22,10 +22,11 @@
         public void CreateOrder(Order order)
         {
             _order.Enqueue(order);
+            Console.WriteLine($"Order: {_order}");
         }
         public void HandleOrder()
         {
-
+            var order = _order.Dequeue();
         }
         public void ShowOrders()
         {
