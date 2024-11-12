@@ -41,6 +41,7 @@
         public void ShowNextOrder()
         {
             _order.Peek();
+            Console.WriteLine("");
         }
         public void ShowOrderCount()
         {
