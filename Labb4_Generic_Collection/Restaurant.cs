@@ -15,18 +15,21 @@
         {
             Console.WriteLine("Menu");
             Console.WriteLine("-------------");
-            foreach (var item in _menu)
+            foreach (var menu in _menu)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(menu);
             }
         }
         public void CreateOrder(Order order)
         {
             _order.Enqueue(order);
+            Console.WriteLine("----------------");
+            Console.WriteLine($"Orders in line:\n{order}");
         }
-        public void HandleOrder()
+        public void HandleOrder(Order order)
         {
-            var order = _order.Dequeue();
+            _order.Dequeue();
+            Console.WriteLine("");
         }
         public void ShowOrders()
         {
@@ -37,11 +40,12 @@
         }
         public void ShowNextOrder()
         {
-
+            _order.Peek();
         }
         public void ShowOrderCount()
         {
-
+            Console.WriteLine("The number of orders total: ");
+            Console.WriteLine(_order.Count);
         }
 
 
