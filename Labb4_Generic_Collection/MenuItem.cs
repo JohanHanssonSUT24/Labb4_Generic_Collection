@@ -2,6 +2,7 @@
 {
     internal class MenuItem
     {
+        //Auto-implemented properties
         public int Id { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
@@ -12,7 +13,7 @@
             Name = name;
             Price = price;
         }
-
+        //Override to display dish and its price
         public override string ToString()
         {
             return $"{Name} - {Price:C}";
