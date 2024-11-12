@@ -27,12 +27,15 @@
             Order order3 = new Order(new List<MenuItem>() { Hamburger, Pizza }, 1);
             Menu.CreateOrder(order3);
 
-            Menu.ShowOrders();
-            Console.WriteLine("---------");
-            
-            
-            
-            
+            //Menu.ShowOrders();
+            //Console.WriteLine("---------");
+            //Menu.HandleOrder(order1);
+            //Menu.ShowOrders();
+            Menu.ShowNextOrder();
+            Menu.ShowOrderCount();
+
+
+
         }
     }
 }
