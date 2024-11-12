@@ -9,39 +9,43 @@
         public void AddtoMenu(MenuItem menuItem)
         {
             _menu.Add(menuItem);
+            Console.WriteLine($"New menu item added, {menuItem}");
         }
         public void ShowMenu()
         {
-            Console.WriteLine("Menu");
-            Console.WriteLine("-------------");
-            foreach (var item in _menu)
+            Console.WriteLine("\n***Restaurant Menu***");
+            Console.WriteLine("---------------------");
+            foreach (var menu in _menu)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(menu);
             }
+            Console.WriteLine("----------------------");
         }
         public void CreateOrder(Order order)
-        {
+        {            
             _order.Enqueue(order);
-            Console.WriteLine($"Order: {_order}");
+            Console.WriteLine($"Ordernumber: {_order.Count} added.");
+            
         }
         public void HandleOrder()
         {
-            var order = _order.Dequeue();
+            Console.WriteLine("Customer served!");
+            _order.Dequeue();
+            Console.WriteLine("");
         }
         public void ShowOrders()
         {
-            foreach (var order in _order)
-            {
-                Console.WriteLine(order);
-            }
+
         }
         public void ShowNextOrder()
         {
-
+            Console.WriteLine("Next order in line:");
+            Console.WriteLine(_order.Peek());
         }
         public void ShowOrderCount()
         {
-
+            Console.WriteLine("The number of orders total: ");
+            Console.WriteLine(_order.Count);
         }
 
 
