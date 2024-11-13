@@ -31,14 +31,11 @@
             foreach (var costs in _orderItems)
             {
                 cost += costs.Price;
-            }
-            
+            }           
             //String.join to create a clear overview with all parameters of each order
-            string totalItems = string.Join(" - 1, ", _orderItems);
-            return $"ORDERNUMBER: {_orderId}\nTablenumber: {_tableNumber}\nOrder: 1, {totalItems}\nTotal bill: {cost.ToString("C")}\n";            
+            string totalItems = string.Join(" - ", _orderItems);
+            return $"\tORDERNUMBER: {_orderId}\n\tOrder: {totalItems}\n\tTablenumber: {_tableNumber}\n\tTotal bill: {cost.ToString("C")}\n";            
         }
-
     }
-
 }   
 

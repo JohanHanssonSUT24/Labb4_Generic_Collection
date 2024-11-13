@@ -9,12 +9,12 @@
         public void AddtoMenu(MenuItem menuItem)
         {
             _menu.Add(menuItem);
-            Console.WriteLine($"New menu item added, {menuItem}");
+            Console.WriteLine($"¤ New menu item added, {menuItem}");
         }
         public void ShowMenu()
         {
             Console.WriteLine("\n***Restaurant Menu***");
-            Console.WriteLine("---------------------");
+            Console.WriteLine("----------------------");
             foreach (var menu in _menu)
             {
                 Console.WriteLine(menu);
@@ -30,12 +30,12 @@
         public void HandleOrder()
         {
             Order handleOrder = _order.Dequeue();
-            Console.WriteLine($"Order {handleOrder.OrderId()} is served.");
+            Console.WriteLine($"[Order {handleOrder.OrderId()} is served]\n");
 
         }
         public void ShowOrders()
         {
-            Console.WriteLine("[Orders in queue...]");
+            Console.WriteLine("[Orders in queue...]\n");
             foreach (var showOrder in _order)
             {
                 Console.WriteLine(showOrder);
@@ -43,12 +43,12 @@
         }
         public void ShowNextOrder()
         {
-            Console.WriteLine("Next order in line:");
+            Console.WriteLine("[Next order in line:]");
             Console.WriteLine(_order.Peek());
         }
         public void ShowOrderCount()
         {
-            Console.WriteLine($"Number of orders: {_order.Count}");
+            Console.WriteLine($"[Total orders in queue: {_order.Count}]\n");
         }
 
 
