@@ -20,8 +20,11 @@
         {
             _orderItems.Add(menuItem);
         }
-        
-        //Override to display orderID, tableNo, items ordered and total cost of order.
+        public int OrderId()
+        {
+            return _orderId;
+        }
+
         public override string ToString()
         {
             decimal cost = 0;
@@ -32,7 +35,7 @@
             
             //String.join to create a clear overview with all parameters of each order
             string totalItems = string.Join(" - 1, ", _orderItems);
-            return $"Ordernumber: {_orderId}\n------------\nTablenumber: {_tableNumber}\nOrder: 1, {totalItems}\nTotal bill: {cost.ToString("C")}\n";            
+            return $"ORDERNUMBER: {_orderId}\nTablenumber: {_tableNumber}\nOrder: 1, {totalItems}\nTotal bill: {cost.ToString("C")}\n";            
         }
 
     }
