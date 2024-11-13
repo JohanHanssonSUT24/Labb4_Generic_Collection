@@ -26,6 +26,7 @@
             order1.AddMenuItem(Pizza);
             order1.AddMenuItem(Falafel);
             Menu.CreateOrder(order1);
+            
 
             Order order2 = new Order(new List<MenuItem>(), 4);
             order2.AddMenuItem(Hotdog);
@@ -40,21 +41,32 @@
             order3.AddMenuItem(Falafel);
             Menu.CreateOrder(order3);
             Console.WriteLine("-----------------");
-            Console.WriteLine("PREPARING ORDERS:");
+            Console.WriteLine("ORDERS IN QUEUE:");
+            Console.WriteLine("-----------------");
             Menu.ShowOrders();
             Menu.ShowNextOrder();
             Menu.HandleOrder();
+            Console.WriteLine("-----------------");
+            Console.WriteLine("PREPARING ORDERS:");
+            Menu.ShowOrders();
+            Order order4 = new Order(new List<MenuItem>(), 5);
+            order4.AddMenuItem(Falafel);
+            order4.AddMenuItem(Hotdog);
+            Menu.CreateOrder(order4);
 
-            //Console.WriteLine("------------------");
-            //Console.WriteLine("------------------");
+            Console.WriteLine("PREPARING ORDERS:");
+            Menu.ShowOrders();
 
-            //Menu.ShowMenu();
-            //Menu.HandleOrder();
-            //Menu.ShowOrderCount();
+            Console.WriteLine("------------------");
+            Console.WriteLine("------------------");
 
-            
-            //Menu.ShowNextOrder();
-            //Menu.ShowOrderCount();
+            Menu.HandleOrder();
+            Menu.ShowOrderCount();
+            Menu.ShowOrders();
+
+            Menu.ShowNextOrder();
+            Menu.ShowOrders();
+            Menu.ShowOrderCount();
 
 
 

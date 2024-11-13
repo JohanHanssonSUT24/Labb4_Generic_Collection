@@ -22,19 +22,20 @@
             Console.WriteLine("----------------------");
         }
         public void CreateOrder(Order order)
-        {            
+        {
             _order.Enqueue(order);
-            Console.WriteLine($"Ordernumber: {_order.Count} added.");
-            
+            Console.WriteLine($"Order {order.OrderId()} added.");        
+
         }
         public void HandleOrder()
         {
-            Console.WriteLine("Customer served!");
-            _order.Dequeue();
-            Console.WriteLine("");
+            Order handleOrder = _order.Dequeue();
+            Console.WriteLine($"Order {handleOrder.OrderId()} is served.");
+
         }
         public void ShowOrders()
         {
+            Console.WriteLine("[Orders in queue...]");
             foreach (var showOrder in _order)
             {
                 Console.WriteLine(showOrder);
@@ -47,8 +48,7 @@
         }
         public void ShowOrderCount()
         {
-            Console.WriteLine("The number of orders total: ");
-            Console.WriteLine(_order.Count);
+            Console.WriteLine($"Number of orders: {_order.Count}");
         }
 
 
