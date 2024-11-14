@@ -7,8 +7,7 @@
         private int _orderId;
         private List<MenuItem> _orderItems;
         private int _tableNumber;
-
-
+        
         public Order(List<MenuItem> orderItems, int tableNumber)
         {
             _orderId = orderIdCounter;
@@ -16,26 +15,28 @@
             _orderItems = orderItems;
             _tableNumber = tableNumber;
         }
+        //Method to add menu-items
         public void AddMenuItem(MenuItem menuItem)
         {
             _orderItems.Add(menuItem);
         }
-        
-        //Override to display orderID, tableNo, items ordered and total cost of order.
+        //Method to count all the orders
+        public int OrderId()
+        {
+            return _orderId;
+        }
         public override string ToString()
         {
+            //Foreach-loop to see total cost of each order
             decimal cost = 0;
             foreach (var costs in _orderItems)
             {
                 cost += costs.Price;
             }
-            
             //String.join to create a clear overview with all parameters of each order
-            string totalItems = string.Join(" - 1, ", _orderItems);
-            return $"Ordernumber: {_orderId}\n------------\nTablenumber: {_tableNumber}\nOrder: 1, {totalItems}\nTotal bill: {cost.ToString("C")}\n";            
+            string totalItems = string.Join(" - ", _orderItems);
+            return $"\tORDERNUMBER: {_orderId}\n\tOrder: {totalItems}\n\tTablenumber: {_tableNumber}\n\tTotal bill: {cost.ToString("C")}\n";            
         }
-
     }
-
 }   
 

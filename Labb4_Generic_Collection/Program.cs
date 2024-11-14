@@ -18,14 +18,13 @@
             Menu.AddtoMenu(Falafel);
             Menu.AddtoMenu(Hotdog);
             Menu.ShowMenu();
-
             
             //Create orders with menu-items
             Order order1 = new Order(new List<MenuItem>(), 7);
             order1.AddMenuItem(Pizza);
             order1.AddMenuItem(Falafel);
             Menu.CreateOrder(order1);
-
+            
             Order order2 = new Order(new List<MenuItem>(), 4);
             order2.AddMenuItem(Hotdog);
             order2.AddMenuItem(Kebab);
@@ -38,25 +37,28 @@
             order3.AddMenuItem(Pizza);
             order3.AddMenuItem(Falafel);
             Menu.CreateOrder(order3);
-            Console.WriteLine("-----------------");
-            Console.WriteLine("PREPARING ORDERS:");
+            //Flowchart
+            Console.WriteLine("--------------------"); 
             Menu.ShowOrders();
+            Menu.ShowOrderCount();
             Menu.ShowNextOrder();
             Menu.HandleOrder();
+            Console.WriteLine("--------------------");
+            Menu.ShowOrderCount();
 
-            //Console.WriteLine("------------------");
-            //Console.WriteLine("------------------");
+            Order order4 = new Order(new List<MenuItem>(), 5);
+            order4.AddMenuItem(Falafel);
+            order4.AddMenuItem(Hotdog);
+            Menu.CreateOrder(order4);
 
-            //Menu.ShowMenu();
-            //Menu.HandleOrder();
-            //Menu.ShowOrderCount();
-
-            
-            //Menu.ShowNextOrder();
-            //Menu.ShowOrderCount();
-
-
-
+            Console.WriteLine("--------------------");
+            Menu.ShowOrderCount();
+            Menu.HandleOrder();
+            Menu.HandleOrder();
+            Menu.ShowOrderCount();
+            Menu.ShowNextOrder();
+            Menu.HandleOrder();
+            Menu.ShowOrderCount();
         }
     }
 }
