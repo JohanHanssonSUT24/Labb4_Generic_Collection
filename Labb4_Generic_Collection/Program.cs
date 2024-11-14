@@ -19,7 +19,6 @@
             Menu.AddtoMenu(Falafel);
             Menu.AddtoMenu(Hotdog);
             Menu.ShowMenu();
-
             
             //Create orders with menu-items
             Order order1 = new Order(new List<MenuItem>(), 7);
@@ -27,7 +26,6 @@
             order1.AddMenuItem(Falafel);
             Menu.CreateOrder(order1);
             
-
             Order order2 = new Order(new List<MenuItem>(), 4);
             order2.AddMenuItem(Hotdog);
             order2.AddMenuItem(Kebab);
@@ -40,13 +38,14 @@
             order3.AddMenuItem(Pizza);
             order3.AddMenuItem(Falafel);
             Menu.CreateOrder(order3);
-
+            //Flowchart
             Console.WriteLine("--------------------"); 
             Menu.ShowOrders();
+            Menu.ShowOrderCount();
             Menu.ShowNextOrder();
             Menu.HandleOrder();
             Console.WriteLine("--------------------");
-            Menu.ShowOrders();
+            Menu.ShowOrderCount();
 
             Order order4 = new Order(new List<MenuItem>(), 5);
             order4.AddMenuItem(Falafel);
@@ -54,20 +53,13 @@
             Menu.CreateOrder(order4);
 
             Console.WriteLine("--------------------");
-            Menu.ShowOrders();
+            Menu.ShowOrderCount();
+            Menu.HandleOrder();
             Menu.HandleOrder();
             Menu.ShowOrderCount();
-
-            Console.WriteLine("--------------------");
-            Menu.ShowOrders();
             Menu.ShowNextOrder();
-
-            Console.WriteLine("--------------------");
-            Menu.ShowOrders();
+            Menu.HandleOrder();
             Menu.ShowOrderCount();
-
-
-
         }
     }
 }
