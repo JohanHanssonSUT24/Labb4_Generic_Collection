@@ -6,13 +6,12 @@
         {
             //Create a menu
             Restaurant Menu = new Restaurant();
-            //Create menu-objects
-            MenuItem Pizza = new MenuItem(1, "Pizza", 150.55M);
-            MenuItem Hamburger = new MenuItem(2, "Hamburger", 180.01M);
-            MenuItem Kebab = new MenuItem(3, "Kebab", 199.99M);
-            MenuItem Falafel = new MenuItem(4, "Falafel", 200.50M);
-            MenuItem Hotdog = new MenuItem(5, "Hotdog", 99.99M);
-            //Add menu-objects 
+
+            MenuItem Pizza = new MenuItem(1, "Pizza", 150M);
+            MenuItem Hamburger = new MenuItem(2, "Hamburger", 180M);
+            MenuItem Kebab = new MenuItem(3, "Kebab", 199M);
+            MenuItem Falafel = new MenuItem(4, "Falafel", 200M);
+
             Menu.AddtoMenu(Pizza);
             Menu.AddtoMenu(Hamburger);
             Menu.AddtoMenu(Kebab);
