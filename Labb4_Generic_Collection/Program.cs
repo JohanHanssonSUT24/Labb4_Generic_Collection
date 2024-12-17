@@ -11,6 +11,7 @@
             MenuItem Hamburger = new MenuItem(2, "Hamburger", 180M);
             MenuItem Kebab = new MenuItem(3, "Kebab", 199M);
             MenuItem Falafel = new MenuItem(4, "Falafel", 200M);
+            MenuItem Hotdog = new MenuItem(5, "Hotdog", 99M);
 
             Menu.AddtoMenu(Pizza);
             Menu.AddtoMenu(Hamburger);
